@@ -33,7 +33,7 @@ public class MovieDBRepositoryTest {
 	private Query query;
 
 	private JSONUtil util;
-	
+
 
 	private static final String MOCK_DATA_ARRAY = "[{\"title\":\"Alien\",\"ageRating\":\"15\"}]";
 

@@ -52,8 +52,10 @@ public class MovieDBRepository implements MovieRepository {
 
 	@Override
 	public String getAllMovies() {
-		Query query = manager.createQuery("Select a FROM Movie a");
-		Collection<Movie> movies = (Collection<Movie>) query.getResultList();
+		Query query = manager.createQuery("Select m FROM Movie m");
+		Collection<Movie> movies =  (Collection<Movie>) query.getResultList();
+		
+//		manager.find(Movie.class, 1L);
 
 		return util.getJSONForObject(movies);
 	}

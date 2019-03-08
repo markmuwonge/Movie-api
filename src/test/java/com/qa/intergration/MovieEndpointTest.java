@@ -22,6 +22,7 @@ public class MovieEndpointTest {
 
 	@InjectMocks
 	private MovieEndpoint endpoint;
+	//Class under test
 
 	@Mock
 	private MovieService service;
@@ -32,14 +33,12 @@ public class MovieEndpointTest {
 	}
 
 	@Test
-	@Ignore
 	public void testGetAllMovies() {
 		Mockito.when(service.getAllMovies()).thenReturn(MOCK_VALUE);
 		Assert.assertEquals(MOCK_VALUE, endpoint.getAllMovies());
 	}
 
 	@Test
-	@Ignore
 	public void testCreateMovie() {
 		Mockito.when(service.addMovie(MOCK_VALUE2)).thenReturn(MOCK_VALUE);
 		Assert.assertEquals(MOCK_VALUE, endpoint.addMovie(MOCK_VALUE2));
@@ -47,7 +46,6 @@ public class MovieEndpointTest {
 	}
 
 	@Test
-	@Ignore
 	public void testDeleteMovie() {
 		Mockito.when(service.deleteMovie(1L)).thenReturn(MOCK_VALUE);
 		Assert.assertEquals(MOCK_VALUE, endpoint.deleteMovie(1L));
