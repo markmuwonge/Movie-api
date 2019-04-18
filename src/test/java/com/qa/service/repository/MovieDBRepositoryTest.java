@@ -63,7 +63,7 @@ public class MovieDBRepositoryTest {
 		List<Movie> movies = new ArrayList<Movie>();
 		movies.add(new Movie("Alien", "15"));
 		Mockito.when(query.getResultList()).thenReturn(movies);
-		Assert.assertEquals(1, repo.cycleMovies("Aliens"));
+		Assert.assertEquals(1, repo.cycleMovies("Alien"));
 
 	}
 
